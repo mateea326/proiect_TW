@@ -37,3 +37,35 @@ CSS:
 - [x] site-ul trebuie să conțină o tranziție care implică schimbarea mai multor proprietăți la intervale diferite de timp
 
 - [x] site-ul trebuie să conțină o animație care să modifice mai multe proprietăți ale aceluiași element
+
+## Cerințe pentru partea 2 (JS): 
+
+JavaScript:
+
+- [x] fișier separat pentru codul JavaScript
+
+- [x] modificarea stilului unui element sau al unui grup de elemente
+
+- [x] manipularea DOM-ului (selectare după id, tag, clasă, folosind selectori CSS)
+
+- [x] crearea și stergerea de elemente HTML
+
+- [x] folosirea și modificarea evenimentelor generate de mouse si tastatură
+
+- [x] modificare de proprietăți
+
+- [] inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea)
+
+- [x] folosirea setTimeout sau setInterval
+
+- [x] folosirea localStorage 
+
+- [x] folosirea a cel puțin unei metode din clasele: Math, Array, String, Date
+
+- [] schimbarea aleatoare a valorilor unor proprietăți (de exemplu: culoare, dimensiuni, poziție)
+
+- [] folosirea proprietăților classList, target sau currentTarget
+
+- [] folosirea metodelor getComputedStyle și stopPropagation
+
+- [] validarea datelor dintr-un formular folosind expresii regulate
