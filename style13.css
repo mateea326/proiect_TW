@@ -20,7 +20,7 @@ li a {
     display: flex;
     color: #2f2d2d;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.875rem 1rem;
     text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ li a:hover {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 body {
@@ -56,8 +56,8 @@ header {
     filter: blur(0.007em);
     animation: shake 2.5s linear forwards;
     background-color: #2f2d2d;
-    padding: 30px;
-    font-size: 30px;
+    padding: 1.875rem;
+    font-size: 1.875rem;
 }
 
 h1 {
@@ -66,13 +66,12 @@ h1 {
     width: 30%;
     margin: auto;
     position: relative;
-    padding: 1%;
 }
 
 .row {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 20px;
+    padding: 1.25rem;
     position: relative;
     background-image: url("photos/back1.jpg");
 }

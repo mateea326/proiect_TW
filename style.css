@@ -27,7 +27,7 @@ h2 {
         color: thistle;
         margin: auto;
         position: relative;
-        text-shadow: -1px 1px 1px rgb(73, 71, 72);
+        text-shadow: -0.063rem 0.063rem 0.063rem rgb(73, 71, 72);
 }
 
 body {
@@ -61,9 +61,9 @@ a:hover {
         display: block;
         color: thistle;
         text-align: center;
-        padding: 14px 16px;
+        padding: 0.875rem 1rem;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 1.063rem;
         cursor: grab;
 }
 
@@ -73,12 +73,12 @@ a:hover {
 }
 
 .dropdown .dropbtn {
-        font-size: 17px;
+        font-size: 1.063rem;
         border: none;
         outline: none;
         color: white;
         background-color: rgb(201, 146, 219);
-        padding: 14px 16px;
+        padding: 0.875rem 1rem;
         font-family: inherit;
         margin: 0;
 }
@@ -87,15 +87,15 @@ a:hover {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 10rem;
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
         z-index: 1;
 }
 
 .dropdown-content a {
         float: none;
         color: black;
-        padding: 12px 16px;
+        padding: 0.75rem 1rem;
         text-decoration: none;
         display: block;
         text-align: left;
@@ -120,19 +120,31 @@ a:hover {
         display: block;
         position: relative;
         margin-top: -9%;
-        margin-left: 6%;
+        margin-left: 16%;
         width: 4rem;
-        aspect-ratio:1/1;
+        aspect-ratio: 1/1;
         border-image: radial-gradient(thistle 69%, #0000 70%) 84.5% fill/100%;
         clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-        transition: width 2s, border-image 2s, rotate 2s;
 }
 
-.heart:hover {
-        width:5rem;
-        border-image: radial-gradient(rgb(144, 127, 174) 69%, #0000 70%) 84.5% fill/100%;
-        transform:rotate(180deg);
+.halo {
+        display: block;
+        position: relative;
+        width: 2.5rem;
+        margin-left: 18%;
+        aspect-ratio: 1/1;
+        border-image: radial-gradient(rgb(201, 146, 219) 69%, #0000 70%) 84.5% fill/100%;
+        clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
+
+.outline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0.125rem solid white;
+        border-radius: 50%;
+        z-index: 100;
+      }
 
 .container {
         z-index: -999;
@@ -148,8 +160,8 @@ a:hover {
 
 .moon {
         background-color: #39beff;
-        height: 170px;
-        width: 170px;
+        height: 10.625rem;
+        width: 10.625rem;
         border-radius: 50%;
         position: absolute;
         margin: auto;
@@ -162,8 +174,8 @@ a:hover {
 
 .crater {
         background-color: #31b4ff;
-        height: 30px;
-        width: 30px;
+        height: 1.875rem;
+        width: 1.875rem;
         border-radius: 50%;
         position: relative;
 }
@@ -171,104 +183,104 @@ a:hover {
 .crater:before {
         content: "";
         position: absolute;
-        height: 25px;
-        width: 25px;
+        height: 1.563rem;
+        width: 1.563rem;
         border-radius: 50%;
-        box-shadow: -5px 0 0 2px #1ca4f9;
-        top: 2px;
-        left: 7px;
+        box-shadow: -0.313rem 0 0 0.125rem #1ca4f9;
+        top: 0.125rem;
+        left: 0.438rem;
 }
 
 .crater1 {
-        top: 27px;
-        left: 90px;
+        top: 1.688rem;
+        left: 5.625rem;
         transform: scale(0.9);
 }
 
 .crater2 {
-        bottom: 15px;
-        left: 61px;
+        bottom: 0.938rem;
+        left: 3.813rem;
         transform: scale(0.6);
 }
 
 .crater3 {
-        left: 15px;
+        left: 0.938rem;
         transform: scale(1.05)
 }
 
 .crater4 {
-        top: 23px;
-        left: 118px;
+        top: 1.438rem;
+        left: 7.375rem;
         transform: scale(1.1)
 }
 
 .crater5 {
-        left: 35px;
+        left: 2.188rem;
         transform: scale(0.5)
 }
 
 .shadow {
-        height: 190px;
-        width: 190px;
-        box-shadow: 21px 0 0 5px rgba(0, 0, 0, 0.15);
+        height: 11.875rem;
+        width: 11.875rem;
+        box-shadow: 1.313rem 0 0 0.313rem rgba(0, 0, 0, 0.15);
         border-radius: 50%;
         position: relative;
-        bottom: 157.5px;
-        right: 46px;
-        filter: blur(3px)
+        bottom: 9.844rem;
+        right: 2.875rem;
+        filter: blur(0.188rem)
 }
 
 .eye {
-        height: 12px;
-        width: 12px;
+        height: 0.75rem;
+        width: 0.75rem;
         background-color: #161616;
         position: relative;
         border-radius: 50%;
 }
 
 .eye-l {
-        bottom: 255px;
-        left: 59px;
+        bottom: 15.938rem;
+        left: 3.688rem;
 }
 
 .eye-r {
-        bottom: 267px;
-        left: 101px;
+        bottom: 16.688rem;
+        left: 6.313rem;
 }
 
 .mouth {
-        height: 5px;
-        width: 10px;
-        border: 3px solid #161616;
+        height: 0.313rem;
+        width: 0.625rem;
+        border: 0.188rem solid #161616;
         position: relative;
-        bottom: 262px;
-        left: 79px;
+        bottom: 16.375rem;
+        left: 4.938rem;
         border-top: none;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 0.625rem 0.625rem;
 }
 
 .blush {
-        height: 7.5px;
-        width: 7.5px;
+        height: 0.469rem;
+        width: 0.469rem;
         background-color: #F4DDE4;
         position: relative;
         border-radius: 50%;
-        filter: blur(3px)
+        filter: blur(0.188rem)
 }
 
 .blush1 {
-        bottom: 273px;
-        left: 50px;
+        bottom: 17.063rem;
+        left: 3.125rem;
 }
 
 .blush2 {
-        bottom: 280px;
-        left: 115px;
+        bottom: 17.5rem;
+        left: 7.188rem;
 }
 
 .orbit {
-        height: 280px;
-        width: 280px;
+        height: 17.5rem;
+        width: 17.5rem;
         border-radius: 50%;
         position: absolute;
         margin: auto;
@@ -287,23 +299,23 @@ a:hover {
 
 .rocket {
         background-color: #fafcf7;
-        height: 50px;
-        width: 25px;
+        height: 3.125rem;
+        width: 1.563rem;
         border-radius: 50% 50% 0 0;
         position: relative;
-        left: -11px;
-        top: 115px;
+        left: -0.688rem;
+        top: 7.188rem;
 }
 
 .rocket:before {
         position: absolute;
         content: "";
         background-color: #39beff;
-        height: 20px;
-        width: 55px;
+        height: 1.25rem;
+        width: 3.438rem;
         z-index: -1;
         border-radius: 50% 50% 0 0;
-        right: -15px;
+        right: -0.938rem;
         bottom: 0;
 }
 
@@ -311,22 +323,22 @@ a:hover {
         position: absolute;
         content: "";
         background-color: #39beff;
-        height: 4px;
-        width: 15px;
-        border-radius: 0 0 2px 2px;
-        bottom: -4px;
-        left: 4.3px;
+        height: 0.25rem;
+        width: 0.938rem;
+        border-radius: 0 0 0.125rem 0.125rem;
+        bottom: -0.25rem;
+        left: 0.269rem;
 }
 
 .window {
         position: relative;
-        height: 10px;
-        width: 10px;
+        height: 0.625rem;
+        width: 0.625rem;
         background-color: #151845;
-        border: 2px solid #b8d2ec;
+        border: 0.125rem solid #b8d2ec;
         border-radius: 50%;
-        top: 15px;
-        left: 5px;
+        top: 0.938rem;
+        left: 0.313rem;
 }
 
 #about_header {
@@ -340,7 +352,7 @@ a:hover {
         width: 80%;
         height: 20%;
         flex-direction: column;
-        border: 2px solid rgb(194, 138, 180);
+        border: 0.125rem solid rgb(194, 138, 180);
         padding: 5%;
         margin: auto;
         background-color: #000000;
@@ -368,13 +380,13 @@ table {
 th {
         color: #151845;
         background-color: rgb(163, 179, 193);
-        border: 1px solid white;
+        border: 0.063rem solid white;
 }
 
 td {
         text-align: center;
         color: #daa9c6;
-        border: 1px solid white;
+        border: 0.063rem solid white;
 }
 
 #poster {
@@ -431,7 +443,6 @@ footer {
         width: 100%;
         color: thistle;
         background-color: #2f2d2d;
-        padding: 2%;
+        padding: 1.5%;
         position: relative;
-
 }
