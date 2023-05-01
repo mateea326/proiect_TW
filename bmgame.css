@@ -65,12 +65,7 @@ p {
     margin: 2rem auto;
 }
 
-button {
-    background: transparent;
-    border: 0;
-}
-
-#map-and-controls {
+#map {
     display: flex;
     justify-content: center;
     position: relative;
@@ -124,11 +119,11 @@ div.layer div {
     background-color: #c78298;
 }
 
-.turquoise .floor {
+.mint .floor {
     background-color: black;
 }
 
-.turquoise .wall {
+.mint .wall {
     background-color: #82c7c0;
 }
 

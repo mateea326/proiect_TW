@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Fontana;
+    src: url("Fontana.otf");
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    background-color: #a72550;
+    color: thistle;
+}
+
+li a:hover {
+    background-color: thistle;
+    color: rgb(219, 123, 171);
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+h1 {
+    padding: 1rem;
+    font-family: Fontana;
+    font-size: 4rem;
+    color: rgb(219, 123, 171);
+    margin-top: -2%;
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.1rem #a72550;
+}
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    transition: 0.2s ease;
+    background-image: url("photos/back.jpg");
+    color: white;
+}
+
+fieldset {
+    border: none;
+    padding: 1rem;
+}
+
+button {
+    color: #a72550;
+    background: thistle;
+    border: none;
+    font-size: 1.2rem;
+    margin-left:1.6%;
+}
+
+footer {
+    color: rgb(219, 123, 171);
+    text-align: end;
+    display: flex;
+    margin-left: 80%;
+    margin-top: -2%;
+    padding: 0.5rem;
+}

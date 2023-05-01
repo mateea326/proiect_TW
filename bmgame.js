@@ -25,11 +25,11 @@ let app = {};
 
   levels[1] = {
     map: [
-      [1, 0, 1, 1, 1, 1],
-      [0, 0, 0, 0, 0, 0],
-      [0, 1, 1, 1, 0, 0],
-      [0, 0, 0, 1, 1, 0],
-      [0, 1, 0, 1, 0, 0]
+      [1, 0, 1, 1, 1],
+      [0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 0],
+      [0, 0, 0, 1, 0],
+      [0, 1, 0, 1, 0]
     ],
     theme: 'green',
     player: {
@@ -44,54 +44,54 @@ let app = {};
 
   levels[2] = {
     map: [
-      [1, 0, 1, 0, 0, 1, 0],
-      [0, 0, 0, 0, 0, 1, 0],
-      [1, 0, 1, 1, 0, 0, 0],
-      [1, 0, 0, 1, 0, 1, 0],
-      [1, 1, 0, 0, 1, 0, 0]
+      [0, 1, 1, 0, 1],
+      [0, 0, 0, 0, 1],
+      [0, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0],
+      [1, 0, 1, 1, 0]
     ],
     theme: 'pink',
     player: {
-      x: 2,
-      y: 4
+      x: 3,
+      y: 0
     },
     goal: {
-      x: 6,
+      x: 4,
       y: 4
     }
   };
 
   levels[3] = {
     map: [
-      [0, 1, 1, 0, 1, 1, 0],
-      [0, 0, 1, 0, 1, 1, 0],
-      [1, 0, 0, 0, 0, 1, 1],
-      [1, 0, 0, 1, 0, 0, 1],
-      [1, 1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 0, 1],
+      [0, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0],
+      [1, 0, 1, 0, 0]
     ],
-    theme: 'turquoise',
+    theme: 'mint',
     player: {
       x: 0,
       y: 0
     },
     goal: {
-      x: 6,
+      x: 3,
       y: 4
     }
   };
 
   levels[4] = {
     map: [
-      [1, 0, 0, 0, 0, 1, 0, 1],
-      [0, 0, 1, 0, 0, 0, 0, 0],
-      [1, 1, 1, 1, 1, 1, 0, 1],
-      [1, 1, 1, 0, 0, 0, 0, 1],
-      [1, 1, 1, 0, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0],
+      [0, 0, 1, 1, 0],
+      [1, 0, 1, 1, 0],
+      [0, 0, 1, 0, 0],
+      [1, 1, 1, 0, 1],
     ],
     theme: 'yellow',
     player: {
-      x: 1,
-      y: 1
+      x: 0,
+      y: 3
     },
     goal: {
       x: 3,
@@ -352,33 +352,6 @@ let app = {};
 
   }
 
-  Game.prototype.buttonListeners = function () {
-    let up = document.getElementById('up');
-    let left = document.getElementById('left');
-    let down = document.getElementById('down')
-    let right = document.getElementById('right');
-
-    let obj = this;
-    up.addEventListener('mousedown', function () {
-
-      obj.moveUp();
-      obj.checkGoal();
-    });
-    down.addEventListener('mousedown', function () {
-      obj.moveDown();
-      obj.checkGoal();
-    });
-    left.addEventListener('mousedown', function () {
-      obj.moveLeft();
-      obj.checkGoal();
-    });
-    right.addEventListener('mousedown', function () {
-      obj.moveRight();
-      obj.checkGoal();
-    });
-
-  }
-
   Game.prototype.setMessage = function (msg) {
     let text_el = this.el.querySelector('.text');
     text_el.textContent = msg;
@@ -410,8 +383,6 @@ let app = {};
   Game.prototype.addListeners = function () {
 
     this.keyboardListener();
-
-    this.buttonListeners();
 
     this.addMazeListener();
   }
