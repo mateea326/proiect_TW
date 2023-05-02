@@ -64,7 +64,7 @@ JavaScript:
 
 - [x] schimbarea aleatoare a valorilor unor proprietăți (de exemplu: culoare, dimensiuni, poziție)
 
-- [ ] folosirea proprietăților classList, target sau currentTarget
+- [x] folosirea proprietăților classList, target sau currentTarget
 
 - [ ] folosirea metodelor getComputedStyle și stopPropagation
 
