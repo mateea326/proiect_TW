@@ -39,7 +39,7 @@ h1 {
     padding: 1rem;
     font-family: Fontana;
     font-size: 4rem;
-    color: rgb(219, 123, 171);
+    color: thistle;
     margin-top: -2%;
     text-align: center;
     text-shadow: 0.2rem 0.2rem 0.1rem #a72550;
@@ -59,7 +59,7 @@ fieldset {
 
 button {
     color: #a72550;
-    background: thistle;
+    background-color: thistle;
     border: none;
     font-size: 1.2rem;
     margin-left:1.6%;

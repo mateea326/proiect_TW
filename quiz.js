@@ -29,9 +29,12 @@ function checkQuiz() {
 }
 
 function changeColor() {
-    const colors = ["thistle", "white", "lavender"];
+    const colors = ["lavenderblush", "linen", "lavender","mistyrose"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.querySelector('h1').style.color = randomColor;
+    document.querySelector('button').style.background = randomColor;
+    document.querySelector('footer').style.color = randomColor;
+    document.querySelector('li a').style.color = randomColor;
 }
 const button = document.getElementById("color-button");
 button.addEventListener("click", changeColor);
