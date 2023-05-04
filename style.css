@@ -12,7 +12,6 @@ h1 {
         letter-spacing: 0.02em;
         text-transform: uppercase;
         text-shadow: 0 0 0.15em #1da9cc;
-        user-select: none;
         white-space: pre-wrap;
         filter: blur(0.007em);
         padding: 5%;
@@ -386,7 +385,6 @@ td {
 #poster {
         width: 30%;
         position: relative;
-        height: fit-content;
         aspect-ratio: 4/3;
         margin-top: 2%;
 }
