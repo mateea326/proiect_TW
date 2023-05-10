@@ -11,7 +11,7 @@ let app = {};
       [0, 0, 0, 1, 0],
       [0, 1, 0, 1, 0]
     ],
-
+    theme: 'lavender',
     player: {
       x: 0,
       y: 4
@@ -19,8 +19,7 @@ let app = {};
     goal: {
       x: 4,
       y: 1
-    },
-    theme: 'lavender',
+    }
   };
 
   levels[1] = {
@@ -108,25 +107,23 @@ let app = {};
     this.tileDim = 6.25;
 
     this.map = level.map;
-
+    //tema si harta se schimba 
     this.theme = level.theme;
 
     this.player = { ...level.player };
-
-    this.player.el = null;
-
+    //obiecte fixe, imutabile, nu se schimba coord pe parcursul nivelului, trb sa ramana const
     this.goal = { ...level.goal };
   }
 
   Game.prototype.createEl = function (x, y, type) {
 
     let el = document.createElement('div');
-    el.className = type;
+    el.className = type; //type va fi floor sau wall
 
     el.style.width = el.style.height = this.tileDim + 'rem';
 
     el.style.left = x * this.tileDim + 'rem';
-
+    //locatia la tile
     el.style.top = y * this.tileDim + 'rem';
 
     return el;
@@ -155,7 +152,7 @@ let app = {};
   Game.prototype.placeSprite = function (type) {
 
     let x = this[type].x
-
+    //pt a lua coord la player si goal din obiectul myGame
     let y = this[type].y;
 
     let sprite = this.createEl(x, y, type);
@@ -171,19 +168,6 @@ let app = {};
     return sprite;
   }
 
-  Game.prototype.collide = function () {
-    this.player.el.className += ' collide';
-
-    let obj = this;
-
-    window.setTimeout(function () {
-      obj.player.el.className = 'player';
-    }, 200);
-
-    return 0;
-
-  };
-
   Game.prototype.moveLeft = function () {
 
     if (this.player.x == 0) {
@@ -193,7 +177,7 @@ let app = {};
 
     let nextTile = this.map[this.player.y][this.player.x - 1];
 
-    if (nextTile == 1) {
+    if (nextTile == 1) { //daca e wall
       this.collide();
       return;
     }
@@ -213,9 +197,9 @@ let app = {};
       this.collide();
       return;
     }
+
     this.player.y -= 1;
     this.updateVert();
-
   };
 
   Game.prototype.moveRight = function () {
@@ -223,12 +207,14 @@ let app = {};
       this.collide();
       return;
     }
+
     nextTile = this.map[this.player.y][this.player.x + 1];
 
     if (nextTile == 1) {
       this.collide()
       return;
     }
+
     this.player.x += 1;
 
     this.updateHoriz();
@@ -245,6 +231,7 @@ let app = {};
       this.collide()
       return;
     }
+
     this.player.y += 1;
     this.updateVert();
 
@@ -329,6 +316,7 @@ let app = {};
         obj.player.x != obj.goal.x) {
         return;
       }
+
       obj.changeLevel();
 
       let layers = obj.el.querySelectorAll('.layer');
@@ -340,7 +328,6 @@ let app = {};
       obj.placeLevel();
 
       obj.checkGoal();
-
     });
   };
 
@@ -349,7 +336,6 @@ let app = {};
       this.movePlayer(event);
       this.checkGoal();
     });
-
   }
 
   Game.prototype.setMessage = function (msg) {

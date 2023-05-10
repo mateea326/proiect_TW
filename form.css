@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    color: #2f2d2d;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+}
+
+li a:hover {
+    color:  rgb(62, 196, 223);
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 1.25rem;
+}
+
+body {
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(208, 207, 205);
+    color: #2f2d2d;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.15em #1da9cc;
+    user-select: none;
+    white-space: pre-wrap;
+    filter: blur(0.007em);
+    animation: shake 2.5s linear forwards;
+    background-color: #2f2d2d;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: rgb(126, 213, 230);
+    width: 30%;
+    margin: auto;
+    position: relative;
+}
+
+#subscribe {
+    padding: 1%;
+    margin-left:3%;
+}
+
+#watch {
+    padding:1%;
+    margin-top:-4.5%;
+    margin-left:56%;
+}
+
+form {
+    margin-left: 3%;
+}
+
+button {
+    font-size: 1rem;
+    margin-top:1.1%;
+    margin-left:1%;
+}
+
+iframe {
+    display: flex;
+    margin-left: 46%;
+    margin-top: -9%;
+    aspect-ratio: 16 / 9;
+    width: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    color:  rgb(126, 213, 230);
+    background-color: #2f2d2d;
+    padding: 1.7%;
+    position: relative;
+    margin-top: 2.78%;
+}

@@ -28,13 +28,31 @@ function checkQuiz() {
     alert(`You scored ${x}/5!`);
 }
 
-function changeColor() {
-    const colors = ["lavenderblush", "linen", "lavender","mistyrose"];
+const colorNames = {
+    'rgb(255, 240, 245)': 'lavenderblush',
+    'rgb(250, 240, 230)': 'linen',
+    'rgb(230, 230, 250)': 'lavender',
+    'rgb(255, 228, 225)': 'mistyrose'
+  };
+  
+  function getColorName(color) {
+    return colorNames[color] || color;
+  }
+  
+  function changeColor() {
+    const colors = Object.keys(colorNames);
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.querySelector('h1').style.color = randomColor;
     document.querySelector('button').style.background = randomColor;
     document.querySelector('footer').style.color = randomColor;
     document.querySelector('li a').style.color = randomColor;
-}
-const button = document.getElementById("color-button");
-button.addEventListener("click", changeColor);
+  
+    const colorDisplay = document.querySelector('#color-display');
+    colorDisplay.textContent = `New color: ${getColorName(randomColor)}`;
+  }
+  
+  const button = document.getElementById("color-button");
+  button.addEventListener("click", changeColor);
+  button.addEventListener('click', function (event) {
+    event.stopPropagation();
+  });
