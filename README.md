@@ -66,6 +66,6 @@ JavaScript:
 
 - [x] folosirea proprietăților classList, target sau currentTarget
 
-- [ ] folosirea metodelor getComputedStyle și stopPropagation
+- [x] folosirea metodelor getComputedStyle și stopPropagation
 
-- [ ] validarea datelor dintr-un formular folosind expresii regulate
+- [x] validarea datelor dintr-un formular folosind expresii regulate
