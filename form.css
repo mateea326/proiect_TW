@@ -101,15 +101,6 @@ iframe {
     padding: 1rem;
 }
 
-@media (min-width: 650px) and (max-width: 700px) {
-
-    iframe {
-        margin: auto;
-        width: 33rem;
-    }
-
-}
-
 @media (min-width: 200px) and (max-width: 650px) {
 
     iframe {
