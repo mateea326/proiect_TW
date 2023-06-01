@@ -54,11 +54,7 @@ JavaScript:
 
 - [x] modificare de proprietăți
 
-- [x] inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea)
-
-- [x] folosirea setTimeout sau setInterval
-
-- [x] folosirea localStorage 
+- [x] inputuri funcționale (input de tip text/range/number/radio/checkbox, select, textarea)
 
 - [x] folosirea a cel puțin unei metode din clasele: Math, Array, String, Date
 
@@ -66,6 +62,6 @@ JavaScript:
 
 - [x] folosirea proprietăților classList, target sau currentTarget
 
-- [x] folosirea metodelor getComputedStyle și stopPropagation
+- [x] folosirea metodei stopPropagation
 
 - [x] validarea datelor dintr-un formular folosind expresii regulate
