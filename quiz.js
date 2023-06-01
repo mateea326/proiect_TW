@@ -36,7 +36,7 @@ const colorNames = {
   };
   
   function getColorName(color) {
-    return colorNames[color] || color;
+    return colorNames[color];
   }
   
   function changeColor() {

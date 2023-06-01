@@ -54,7 +54,6 @@ body {
 p {
     margin-top: -3%;
     padding: 0.6rem;
-    margin-left: -5%;
     color: #FFD700;
     text-shadow: 0.2rem 0.2rem 0.1rem #ab1431;
 }
@@ -155,8 +154,14 @@ div.layer div {
 footer {
     color: #FFD700;
     text-align: end;
-    display: flex;
-    margin-left: 80%;
     margin-top: -2%;
     padding: 0.5rem;
+}
+
+#level-number {
+    color: #fff;
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -2%;
+    margin-left:1%;
 }

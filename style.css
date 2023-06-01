@@ -389,8 +389,13 @@ td {
         margin-top: 2%;
 }
 
-#suad {
+#container_trailer {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+}
+
+#suad {
         margin-top: 3%;
         margin-left: 3%;
         position: relative;
@@ -399,20 +404,47 @@ td {
 }
 
 .yt {
-        display: flex;
         margin: auto;
-        margin-top: -25%;
+        margin-top: 2%;
+        margin-left: 4%;
         position: relative;
         aspect-ratio: 16 / 9;
         width: 50%;
 }
 
 #white {
-        display: flex;
         margin-top: -28%;
         margin-left: 79%;
         position: relative;
         width: 18%;
+}
+
+@media only screen and (max-width: 600px) {
+
+        #poster {
+                width: 70%;
+                margin: auto;
+        }
+
+        #container_trailer {
+                flex-direction: column;
+        }
+
+        #suad {
+                width: 60%;
+                margin: auto;
+        }
+
+        .yt {
+                width: 60%;
+                margin: auto;
+        }
+
+        #white {
+                width: 60%;
+                margin: auto;
+        }
+        
 }
 
 #Play {
@@ -425,7 +457,6 @@ td {
         position: relative;
         aspect-ratio: 5/4;
         width: 98%;
-
 }
 
 footer {

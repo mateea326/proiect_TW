@@ -25,7 +25,7 @@ li a {
 }
 
 li a:hover {
-    color:  rgb(62, 196, 223);
+    color: rgb(62, 196, 223);
 }
 
 .nav_bar {
@@ -60,6 +60,13 @@ header {
     font-size: 1rem;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 h1 {
     text-align: center;
     display: flex;
@@ -72,13 +79,10 @@ h1 {
 
 #subscribe {
     padding: 1%;
-    margin-left:3%;
 }
 
 #watch {
-    padding:1%;
-    margin-top:-4.5%;
-    margin-left:56%;
+    padding: 1%;
 }
 
 form {
@@ -87,16 +91,32 @@ form {
 
 button {
     font-size: 1rem;
-    margin-top:1.1%;
-    margin-left:1%;
+    margin-top: 1.1%;
+    margin-left: 1%;
 }
 
 iframe {
-    display: flex;
-    margin-left: 46%;
-    margin-top: -9%;
     aspect-ratio: 16 / 9;
-    width: 50%;
+    width: 45rem;
+    padding: 1rem;
+}
+
+@media (min-width: 650px) and (max-width: 700px) {
+
+    iframe {
+        margin: auto;
+        width: 33rem;
+    }
+
+}
+
+@media (min-width: 200px) and (max-width: 650px) {
+
+    iframe {
+        margin: auto;
+        width: 30rem;
+    }
+
 }
 
 footer {
@@ -104,7 +124,7 @@ footer {
     justify-content: center;
     margin: auto;
     width: 100%;
-    color:  rgb(126, 213, 230);
+    color: rgb(126, 213, 230);
     background-color: #2f2d2d;
     padding: 1.7%;
     position: relative;

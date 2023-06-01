@@ -8,7 +8,7 @@ let app = {};
       [1, 1, 0, 0, 1],
       [1, 0, 0, 0, 0],
       [0, 0, 1, 1, 0],
-      [0, 0, 0, 1, 0],
+      [0, 1, 0, 1, 1],
       [0, 1, 0, 1, 0]
     ],
     theme: 'lavender',
@@ -107,11 +107,11 @@ let app = {};
     this.tileDim = 6.25;
 
     this.map = level.map;
-    //tema si harta se schimba 
+
     this.theme = level.theme;
 
     this.player = { ...level.player };
-    //obiecte fixe, imutabile, nu se schimba coord pe parcursul nivelului, trb sa ramana const
+    //obiecte fixe, nu se schimba coord pe parcursul nivelului, trb sa ramana const
     this.goal = { ...level.goal };
   }
 
@@ -171,14 +171,12 @@ let app = {};
   Game.prototype.moveLeft = function () {
 
     if (this.player.x == 0) {
-      this.collide();
       return;
     }
 
     let nextTile = this.map[this.player.y][this.player.x - 1];
 
     if (nextTile == 1) { //daca e wall
-      this.collide();
       return;
     }
 
@@ -188,13 +186,11 @@ let app = {};
 
   Game.prototype.moveUp = function () {
     if (this.player.y == 0) {
-      this.collide();
       return;
     }
 
     let nextTile = this.map[this.player.y - 1][this.player.x];
     if (nextTile == 1) {
-      this.collide();
       return;
     }
 
@@ -204,14 +200,12 @@ let app = {};
 
   Game.prototype.moveRight = function () {
     if (this.player.x == this.map[this.player.y].length - 1) {
-      this.collide();
       return;
     }
 
     nextTile = this.map[this.player.y][this.player.x + 1];
 
     if (nextTile == 1) {
-      this.collide()
       return;
     }
 
@@ -222,13 +216,11 @@ let app = {};
 
   Game.prototype.moveDown = function () {
     if (this.player.y == this.map.length - 1) {
-      this.collide();
       return;
     }
 
     let nextTile = this.map[this.player.y + 1][this.player.x];
     if (nextTile == 1) {
-      this.collide()
       return;
     }
 
@@ -249,7 +241,7 @@ let app = {};
     event.preventDefault();
 
     if (event.keyCode < 37 || event.keyCode > 40) {
-      return;
+      return; //sa nu se int nimic
     }
 
     switch (event.keyCode) {
@@ -289,17 +281,13 @@ let app = {};
     this.level_idx++;
 
     if (this.level_idx > levels.length - 1) {
-      this.level_idx = 0;
+      this.level_idx = 0; //dupa ultimul nivel, se revine la primul
     }
 
     let level = levels[this.level_idx];
-
     this.map = level.map;
-
     this.theme = level.theme;
-
     this.player = { ...level.player };
-
     this.goal = { ...level.goal };
   }
 
@@ -364,6 +352,16 @@ let app = {};
 
     this.player.el = playerSprite;
 
+    let levelNumber = document.getElementById('level-number');
+    levelNumber.textContent = 'Level ' + (this.level_idx + 1);
+  }
+
+  context.init = function () {
+    let myGame = new Game('game-container-1', levels[0]);
+
+    myGame.placeLevel();
+
+    myGame.addListeners();
   }
 
   Game.prototype.addListeners = function () {
